@@ -4,6 +4,8 @@
         "ostream": "cpp",
         "vector": "cpp",
         "__bit_reference": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "iostream": "cpp",
+        "ios": "cpp"
     }
 }
