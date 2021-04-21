@@ -17,6 +17,7 @@
         "__bit_reference": "cpp",
         "algorithm": "cpp",
         "tuple": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "ios": "cpp"
     }
 }
