@@ -15,26 +15,26 @@ int main(){
     int ans =0;
     vector<set<string> > quals;
     quals.resize(N);
-    for (int i = 0; i < N; i++)
-    {
+    for(int i=0;i<N; i++){
         string name;
-        int K;
-        cin>>name>>K;
-        for (int j = 0; j < K; j++)
+        int num;
+        cin>>name>>num;
+        for (int j = 0;  j < num; j++)
         {
             string qual;
-            cin>>qual;
+            cin>> qual;
             quals[i].insert(qual);
-        }
+        }    
     }
-    for (int i = 0; i < N; i++)
-    {
-        for (int j = i+1; j<N; j++)
-        {
-            set<string> s;
-            merge(quals[i].begin(),quals[i].end(),quals[j].begin(), quals[j].end(),inserter(s, s.begin()));
-            int same = quals[i].size()+quals[j].size()-s.size();
-            ans = max(same, ans);
+
+    for (int i = 0; i < N; i++){
+        for (int j = i+1; j <N;j++){
+            set<string> set1,set2, finalanswer;
+            set1 = quals[i];
+            set2 = quals[j];
+            merge(set1.begin(),set1.end(),set2.begin(),set2.end(),inserter(finalanswer,finalanswer.begin()));
+            int finalanswerint = set1.size()+set2.size() -finalanswer.size();
+            ans = max(ans,finalanswerint);
         }
     }
     cout<<ans+1<<endl;
