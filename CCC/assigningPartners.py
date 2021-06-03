@@ -1,18 +1,22 @@
 n = int(input())
 line1 = input().split(" ")
 line2 = input().split(" ")
-
+good = True
 partners = {}
 
 for i in range(n):
     first_person = line1[i]
-    if first_person in partners:
-        if partners[first_person] == line2[i]:
-            continue
-        else:
-            print('bad')
-            quit()
-    else:
-        partners[first_person] =line2[i]
-        partners[line2[i]] = first_person
-print("good")
+    second_person = line2[i]
+    if first_person == second_person:
+        good = False
+        break
+    if first_person in partners and partners[first_person]!= second_person:
+        good = False
+        break
+    partners[first_person] = second_person
+    partners[second_person] = first_person
+
+if good:
+    print('good')
+else:
+    print('bad')
