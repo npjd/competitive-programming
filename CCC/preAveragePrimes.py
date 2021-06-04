@@ -1,11 +1,13 @@
+import math
+
 t = int(input())
 found = False
 
 def is_valid(num):
-    for i in range(2, int(num/2)+1):
- 
-        # If num is divisible by any number between
-        # 2 and n / 2, it is not prime
+    if num % 2==0:
+        return False
+    end =math.floor(math.sqrt(num))
+    for i in range(2, end+1):
         if (num % i) == 0:
             return False
     return True
