@@ -38,7 +38,7 @@ int main(){
         int a;
         int b;
         cin>>a>>b;
-        cout<< hoslteins[b] -hoslteins[a-1] << gurneys[b] -gurneys[a-1]<<jerseys[b]-jerseys[a-1]<<endl;
+        cout<< hoslteins[b] -hoslteins[a-1] << " "<<gurneys[b] -gurneys[a-1]<<" "<<jerseys[b]-jerseys[a-1]<<endl;
     }
     
 }
