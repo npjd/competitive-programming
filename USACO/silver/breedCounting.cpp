@@ -4,6 +4,9 @@
 using namespace std;
 
 int main(){
+    ios_base::sync_with_stdio(0); cin.tie(0);
+    freopen("bcount.in","r",stdin);
+	freopen("bcount.out","w",stdout);
     int n = 0;
     int q = 0;
     cin>>n>>q;
