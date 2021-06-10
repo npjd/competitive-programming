@@ -20,22 +20,22 @@ int main(){
         cin>>move;
         if (move=='H')
         {
-            preH[i]++;
-        }
-        else if (move=='S')
+            preH[i]+=1;
+        }else if (move=='S')
         {
-            preS[i]++;
-        }
-        else if (move=='P')
+            preS[i]+=1;
+        }else if (move=='P')
         {
-            preP[i]++;
+            preP[i]+=1;
         }        
     }
-    for (int i = 1; i <= n; i++)
-    {
+    
+    for (int i = 1; i < n; i++)
+    {        
         int beforeI = max(preH[i],max(preS[i],preP[i]));
         int afterI = max(preH[n]-preH[i],max(preS[n]-preS[i],preP[n]-preP[i]));
         ans = max(ans, beforeI+afterI);
+        
     }
     cout<<ans<<endl;
     
