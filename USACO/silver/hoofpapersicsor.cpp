@@ -3,14 +3,14 @@
 using namespace std;
 
 int main(){
-    freopen("hps.in", "r", stdin);
-	freopen("hps.out", "w", stdout);
+    // freopen("hps.in", "r", stdin);
+	// freopen("hps.out", "w", stdout);
     int n;
     int ans = 0;
     cin>>n;
-    int preH[100000];
-    int preS[100000];
-    int preP[100000];
+    int preH[n+1];
+    int preS[n+1];
+    int preP[n+1];
     for (int i = 1; i <= n; i++)
     {
         preH[i] =preH[i-1];
