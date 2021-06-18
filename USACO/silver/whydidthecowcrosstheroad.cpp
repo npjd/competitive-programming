@@ -6,6 +6,7 @@ int main(){
     int n;
     int k;
     int b;
+    int ans = 1000000000000000000000000000;
     cin>>n>>k>>b;
     int signals[n+1];
     int prefix[n+1];
@@ -19,8 +20,11 @@ int main(){
     {
         prefix[i] = prefix[i-1]+signals[i];
     }
-    
+    for (int i = k; i <= n; i++)
+    {
+        ans = min(ans, prefix[i] - prefix[i-k]);
+    }
 
-    
-    
+    cout<<ans<<endl;
+         
 }
