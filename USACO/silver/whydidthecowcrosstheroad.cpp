@@ -8,7 +8,7 @@ int main(){
     int b;
     cin>>n>>k>>b;
     int ans = k;
-    int signals[n+1];
+    bool signals[n+1];
     int prefix[n+1];
     for (int i = 0; i < b; i++)
     {
