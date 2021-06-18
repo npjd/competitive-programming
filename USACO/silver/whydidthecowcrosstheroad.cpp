@@ -7,13 +7,20 @@ int main(){
     int k;
     int b;
     cin>>n>>k>>b;
-    int signals[n];
-    int prefix[n +1];
-    prefix[0] = 0;
-    for (int i = 0; i < n; i++)
+    int signals[n+1];
+    int prefix[n+1];
+    for (int i = 0; i < b; i++)
     {
-        signals[i] = i+1;
+        int broke;
+        cin>>broke;
+        signals[broke] += 1;
     }
+    for (int i = 1; i <= n; i++)
+    {
+        prefix[i] = prefix[i-1]+signals[i];
+    }
+    
+
     
     
 }
