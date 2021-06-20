@@ -11,6 +11,13 @@ int main(){
     cin>>str1;
     cin>>str2;
 
+    if (str1.length() != str2.length)
+    {
+        cout << "N";
+		return 0;
+    }
+    
+
     int n = str1.length();
     
     sort(str1.begin(), str1.end());
