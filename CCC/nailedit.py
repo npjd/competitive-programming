@@ -13,7 +13,6 @@ for i in range(0, len(L) - 1):
         else:
             F[i + j] += min(L[i], L[j])
 
-print(F)
 
 longest, size = 0, 0
 
