@@ -20,8 +20,7 @@ int main(){
                 }
             }            
         }
-        cout<<result<<endl;
+        cout<<result*4+1<<endl;
         cin>>radius;        
     }
-
 }
