@@ -9,6 +9,9 @@ for i in range(len(ogString)):
     dict[encryptedString[i]] = ogString[i]
 
 for i in range(len(encryptedAns)):
-    ans += dict[encryptedAns[i]]
+    try:
+        ans += dict[encryptedAns[i]]
+    except:
+        ans+="."
 
 print(ans)
