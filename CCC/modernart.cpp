@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -10,8 +11,7 @@ int main(){
     cin>>n;
     cin>>k;
     
-    int rows[m];
-    int cols[n];
+    vector<int> rows(m, 0), cols(n, 0);
 
     for (int i = 0; i < k; i++)
     {
@@ -34,7 +34,7 @@ int main(){
         {
             if (rows[i] ^ cols[j])
             {
-                ans+=1;
+                ans++;
             }
             
         }        
