@@ -1,27 +1,28 @@
-def checkValid(dimens,box):
-    if dimens[0]<=box[0]:
-        if dimens[1]<=box[1]:
-            if dimens[2]<=box[2]:
-                return True
-    return False
-
+from itertools import permutations
 n = int(input())
-boxes = []
-for i in range(n):
-    string = input().split(' ')
-    numbers = [int(i) for i in string]
-    numbers.sort()
-    boxes.append(numbers)
-t = int(input())
-for i in range(t):
-    string = input().split(' ')
-    dimens = [int(i) for i in string]
-    dimens.sort()
-    fit = False
-    for box in boxes:
-        if checkValid(dimens,box):
-            print(box[0]*box[1]*box[2])
-            fit = True
+boxes = [[] for i in range(n)]
+for box in range(n):
+    boxes[box] = [int(i) for i in input().split()]
+def getMult(x1):
+    x,y,z = x1
+    return x * y * z
+m = int(input())
+
+boxes = sorted(boxes, key = lambda x: getMult(x))
+
+for placeholder in range(m):
+    x2,y2,z2 = [int(i) for i in input().split()]
+    boxFound = False
+    for box in range(len(boxes)):
+        x1,y1,z1 = boxes[box]
+        for i in permutations([x2,y2,z2]):
+            x,y,z = i
+            if x <= x1 and y <= y1 and z <= z1:
+                print(x1 * y1 * z1)
+                boxFound = True
+                break
+        if boxFound:
+            boxFound = False
             break
-    if fit == False:
-        print("Item does not fit.")
+        elif box == n - 1:
+            print('Item does not fit.')
