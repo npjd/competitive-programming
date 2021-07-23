@@ -21,7 +21,7 @@ for i in range(n):
     elif formula > secondVal:
         secondVal = formula
         secondName = name
-if firstName == secondName:
+if firstVal == secondVal:
     pair = (firstName, secondName)
     pair = sorted(pair)
     print(pair[0])
