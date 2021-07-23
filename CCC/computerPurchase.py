@@ -1,6 +1,9 @@
 n = int(input())
 
-d= {}
+firstName = ""
+firstVal = 0
+secondName = ""
+secondVal = 0
 
 for i in range(n):
     daInput = input().split(" ")
@@ -10,12 +13,20 @@ for i in range(n):
     D = int(daInput[3])
 
     formula = 2*R + 3*S + D
-    d[name] = formula
-
-
-highest = max(d, key=d.get)
-print(highest)
-d.pop(highest)
-highest = max(d, key=d.get)
-print(highest)
+    if formula > firstVal:
+        secondVal = firstVal
+        secondName = firstName
+        firstVal = formula
+        firstName = name
+    elif formula > secondVal:
+        secondVal = formula
+        secondName = name
+if firstName == secondName:
+    pair = (firstName, secondName)
+    pair = sorted(pair)
+    print(pair[0])
+    print(pair[1])
+else:
+    print(firstName)
+    print(secondName)
 
