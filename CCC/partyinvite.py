@@ -19,4 +19,4 @@ for multiple in multiples:
     people = filtered
 
 for i in range(len(people)):
-    print(people[i])
+    print(people[i]) 
