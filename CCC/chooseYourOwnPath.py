@@ -38,7 +38,3 @@ else:
     print("N")
 
 print(findShortestPath([bookNodes[1]],0))
-
-
-    
-
