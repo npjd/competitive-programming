@@ -2,22 +2,23 @@ alph = {1: 'A', 2: 'B', 3: 'C', 4: 'D', 5: 'E', 6: 'F', 7: 'G', 8: 'H', 9: 'I', 
 
 shifterString = input()
 ogString = input()
+ogString.strip()
+replaceString = ''
+for i in range(len(ogString)):
+    if ogString[i].isalpha():
+        replaceString += ogString[i]
 ans = ""
-index = 0
+
+ogString = replaceString
+
 for i in range(len(ogString)):
     char = ogString[i]
-    if char not in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
-        continue
-    shiftChar = shifterString[index%len(shifterString)]
-    numShift = alph[shiftChar] -1
-    num = alph[char]
-    num += numShift
-    num%=26
-    if num == 0:
-        num = 26
-    ans+= alph[num]
-    index+=1
-
+    shifterChar = shifterString[i%len(shifterString)]
+    shiftValue = alph[shifterChar] -1
+    newChar = alph[char] + shiftValue
+    if newChar > 26:
+        newChar = newChar - 26
+    ans += alph[newChar]
 
 print(ans)
-    
+
