@@ -1,6 +1,6 @@
 N = int(input())
-sensors = [] #value of sensor
-readings = [] #frequency
+sensors = []
+readings = []
 highs = []
 highs2 = []
 
@@ -11,11 +11,10 @@ for i in range(N):
     readings.append(1)
   elif r in sensors:
     readings[sensors.index(r)] += 1
-
+    
 for i in range(len(sensors)):
   if readings[i] == max(readings):
     highs.append(int(sensors[i]))
-
 
 if len(highs) > 1:
   highs.sort()
