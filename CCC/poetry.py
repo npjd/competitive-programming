@@ -1,12 +1,12 @@
 n = int(input())
 
 def find_vowel(word):
-    for i in word[::-1]:
-        if i in 'aeiouAEIOU':
-            return i
+    for i in range(len(word)-1,0,-1):
+        if word[i] in 'aeiou':
+            return word[i:]
     return word
 
-for i in range(n):
+for _ in range(n):
     word1 = input().lower().split(" ")[-1]
     word2 = input().lower().split(" ")[-1]
     word3 = input().lower().split(" ")[-1]
@@ -27,5 +27,3 @@ for i in range(n):
         print("shell")
     else:
         print("free")
-
-
