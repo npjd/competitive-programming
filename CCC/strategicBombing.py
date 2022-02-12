@@ -61,10 +61,10 @@ for road in roads:
                 visited[i] = True
     # if b was not visisted, that mean taht road is valid to blow up
     if visited["B"] == False:
-        print("YES",road)
+
         ans +=1
     # add the road back to the graph
     graph[temp1].append(temp2)
     graph[temp2].append(temp1)
 
-print(ans)
+print('There are '+str(ans)+' disconnecting roads.')
