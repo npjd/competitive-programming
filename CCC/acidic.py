@@ -2,6 +2,7 @@ N = int(input())
 sensors = []
 readings = []
 highs = []
+# hi!
 highs2 = []
 
 for i in range(N):
