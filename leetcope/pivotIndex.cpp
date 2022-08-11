@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+// what?
 using namespace std;
 
 void fillPrefixSum(int arr[], int n, int prefixSum[])
