@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "contest.ccc2023.Main",
+            "projectName": "competitive-programming_9e37d6"
+        },
+        {
             "name": "clang++ - Build and debug active file",
             "type": "cppdbg",
             "request": "launch",

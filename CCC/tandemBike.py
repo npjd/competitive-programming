@@ -28,3 +28,6 @@ for i in range(N):
     sum+=intMax
 
 print(sum)
+
+# what is the time complexity?
+# O(n)
